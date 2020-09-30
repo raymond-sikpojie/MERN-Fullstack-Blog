@@ -21,7 +21,7 @@ export default function Home() {
             <div className="description">
               <h1 className="hero-title">Daily Journal</h1>
               <p>
-                Document your wildest thoughts. Write about things you love.
+                Document your fondest memories. Write about things you love.
                 Talk about those cool stuff that you are most passionate about.
                 Share your ideas with the world. Ramble on about your exciting,
                 new ideas.
