@@ -17,7 +17,7 @@ export default function Home() {
             {/* <div className="logo">Logo Here</div> */}
             <Link to="/login">Sign In</Link>
           </div>
-          <div className="hero-container" data-aos="fade-up">
+          <div className="hero-container" data-aos="fade-down">
             <div className="description">
               <h1 className="hero-title">Daily Journal</h1>
               <p>
