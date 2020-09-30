@@ -54,11 +54,11 @@ export default function PostList() {
 
       setTimeout(() => {
         history.push("/posts/open"); // Gives some time to fetch post photo from local storage
+        setLoading(false);
       }, 2000);
 
       // call function to fetch photo
       getPhoto(postId);
-      setLoading(false);
     }
   };
 
