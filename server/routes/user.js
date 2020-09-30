@@ -88,7 +88,7 @@ router.get("/", async (req, res) => {
 });
 
 // Fine one user
-router.get("/:id", auth, async (req, res) => {
+router.get("/:id", async (req, res) => {
   const id = req.params.id;
   try {
     const user = await User.findById(id).select("-password").populate("posts");
