@@ -16,6 +16,10 @@ input {
   font-family: "Cairo", sans-serif;
 }
 
+.home-main {
+  min-height: 100vh;
+}
+
 .hero {
   display: flex;
   flex-direction: column;

@@ -1,9 +1,13 @@
+/* NOTE: The loader settings was changed from its normal setting.
+In loader-main, align-items: center was removed 
+In .donut, margin was set from 2rem to margin-top: 2em */
+
 .loader-main {
   display: flex;
   justify-content: center;
-  align-items: center;
+  /* align-items: center; */
   width: 100%;
-  min-height: 100%;
+  min-height: 200%;
   position: absolute;
   top: 0;
   left: 0;
@@ -12,9 +16,10 @@
 }
 
 .donut {
+  margin-top: 50vh;
   width: 2rem;
   height: 2rem;
-  margin: 2rem;
+  /* margin: 2rem; */
   border-radius: 50%;
   border: 0.3rem solid rgba(151, 159, 208, 0.3);
   border-top-color: #979fd0;
