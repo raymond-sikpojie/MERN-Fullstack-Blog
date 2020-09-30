@@ -2,7 +2,7 @@ import React, { useContext, useEffect, useState } from "react";
 import { useHistory } from "react-router-dom";
 import UserContext from "../../context/Context";
 import Loader from "../Loader/Loader";
-// import "./userposts.css";
+import "./userposts.css";
 import Aos from "aos";
 import "aos/dist/aos.css";
 
