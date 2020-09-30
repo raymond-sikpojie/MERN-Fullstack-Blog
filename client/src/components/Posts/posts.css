@@ -1,0 +1,11 @@
+.posts-main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: whitesmoke;
+  min-height: 100vh;
+}
+
+.posts-main .posts {
+  margin-top: 5rem;
+}

@@ -1,0 +1,94 @@
+.form-container {
+  width: 70%;
+  min-height: 90vh;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 5rem;
+}
+
+.addPost__title {
+  text-align: center;
+  margin-top: 30px;
+}
+
+#post input[type="text"],
+#post input[type="email"],
+#post input[type="tel"],
+#post input[type="url"],
+#post textarea,
+#post button[type="submit"] {
+  font: 400 12px/16px "Roboto", Helvetica, Arial, sans-serif;
+  font-size: 1.2rem;
+}
+
+.form-container .send-post {
+  cursor: pointer;
+  border-radius: 5em;
+  color: #fff;
+  background-color: #d81159;
+  border: 0;
+  padding: 10px 20px;
+  font-family: "Ubuntu", sans-serif;
+  font-size: 13px;
+  margin-top: 10px;
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0 0 20px 1px rgba(0, 0, 0, 0.04);
+}
+
+.form-container .send-post:hover,
+.form-container .send-post:focus {
+  background-color: black;
+}
+
+#post {
+  background: #f9f9f9;
+  padding: 25px;
+  margin: 50px 0;
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+}
+
+#post input[type="text"],
+#post input[type="email"],
+#post input[type="tel"],
+#post input[type="url"],
+#post input[type="file"],
+#post textarea {
+  width: 100%;
+  border: 1px solid #ccc;
+  background: #fff;
+  margin: 10px 0;
+  padding: 10px;
+}
+
+#post input[type="text"]:hover,
+#post input[type="email"]:hover,
+#post input[type="tel"]:hover,
+#post input[type="url"]:hover,
+#post textarea:hover {
+  -webkit-transition: border-color 0.3s ease-in-out;
+  -moz-transition: border-color 0.3s ease-in-out;
+  transition: border-color 0.3s ease-in-out;
+  border: 1px solid #aaa;
+}
+
+#post textarea {
+  height: 200px;
+  max-width: 100%;
+  resize: none;
+}
+
+::-webkit-input-placeholder {
+  color: #888;
+}
+
+:-moz-placeholder {
+  color: #888;
+}
+
+::-moz-placeholder {
+  color: #888;
+}
+
+:-ms-input-placeholder {
+  color: #888;
+}

@@ -1,0 +1,102 @@
+.userposts__main {
+  margin: 5rem;
+  min-height: 80vh;
+}
+
+.userposts__main .title {
+  margin: 20px;
+}
+.show__allposts {
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 550px;
+  margin: 20px;
+  box-shadow: rgba(50, 50, 105, 0.15) 0px 2px 5px 0px,
+    rgba(0, 0, 0, 0.05) 0px 1px 1px 0px;
+}
+
+.show__allposts > h3,
+p {
+  margin-top: 10px;
+  line-height: 1.5rem;
+}
+
+.show__allposts img {
+  width: 100%;
+  height: 60%;
+}
+
+.latest {
+  text-align: center;
+}
+
+.show__allposts .content-container {
+  background-color: white;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  border-radius: 7px;
+}
+
+.show__allposts .content > h3,
+.show__allposts .content > p {
+  margin: 10px 0;
+  line-height: 1.5rem;
+}
+
+.content .links {
+  float: right;
+}
+
+.content .links > a.read {
+  text-decoration: none;
+  color: #218380;
+  font-size: 1rem;
+  margin-top: 10px;
+  cursor: pointer;
+  padding: 0 10px;
+  background-color: #fff;
+  -webkit-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+.content .links > a.read:hover,
+.content .links > a.read:focus {
+  background-color: #218380;
+  color: white;
+}
+
+.content .links > a.delete {
+  text-decoration: none;
+  color: #d81159;
+  font-size: 1rem;
+  margin: 10px;
+  cursor: pointer;
+  width: 100px;
+  padding: 0 10px;
+  background-color: #fff;
+  -webkit-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+.content .links > a.delete:hover,
+.content .links > a.delete:focus {
+  background-color: #d81159;
+  color: white;
+}
+
+@media (max-width: 768px) {
+  .userposts__main {
+    display: flex;
+    justify-content: center;
+    min-height: 80vh;
+  }
+  .show__allposts {
+    flex-direction: column;
+    width: 90vw;
+  }
+}

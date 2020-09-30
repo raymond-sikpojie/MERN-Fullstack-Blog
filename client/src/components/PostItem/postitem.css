@@ -1,0 +1,111 @@
+.post__item {
+  margin-top: 4rem;
+  margin-left: auto;
+  margin-right: auto;
+  width: 80%;
+  min-height: 100vh;
+}
+
+.title,
+.author,
+.body {
+  margin-top: 25px;
+  line-height: 2.5rem;
+}
+
+.post__item img {
+  width: 90%;
+  height: 600px;
+}
+.post__item .body {
+  width: 85%;
+  font-size: 1.1rem;
+  padding: 10px;
+}
+
+.post__item .tags {
+  font-weight: 700;
+}
+
+.post__item .comments {
+  margin: 40px 30px;
+  padding: 10px 20px;
+  min-height: 10vh;
+  width: 60%;
+}
+
+.comment__content h2,
+.comment__content p {
+  margin-top: 1rem;
+}
+
+.comments .comment__content {
+  margin: 2rem 0;
+}
+
+.comment__content .comment__body {
+  /* margin-bottom: 30px; */
+  border-bottom: 1px solid rgb(216, 213, 213);
+}
+
+.addComment-main {
+  margin: 1rem;
+  width: 100%;
+}
+
+.addComment-main .textarea {
+  font-size: 1.1rem;
+  padding: 1rem;
+  width: 400px;
+  height: 100px;
+  margin: 3rem;
+}
+
+.addComment-main .post-comment {
+  cursor: pointer;
+  border-radius: 5em;
+  color: #fff;
+  background-color: #d81159;
+  border: 0;
+  padding: 10px 20px;
+  font-family: "Ubuntu", sans-serif;
+  font-size: 13px;
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0 0 20px 1px rgba(0, 0, 0, 0.04);
+}
+
+.addComment-main .post-comment:hover,
+.addComment-main .post-comment:focus {
+  background-color: black;
+}
+
+@media (max-width: 768px) {
+  .post__item {
+    display: flex;
+    flex-direction: column;
+    /* align-items: center; */
+    width: 90%;
+  }
+  .post__item img {
+    width: 100%;
+  }
+
+  .post__item .body {
+    width: 100%;
+    font-size: 1.1rem;
+  }
+
+  .post__item .comments {
+    width: 80%;
+  }
+
+  .addComment-main form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .addComment-main .textarea {
+    width: 300px;
+  }
+}
