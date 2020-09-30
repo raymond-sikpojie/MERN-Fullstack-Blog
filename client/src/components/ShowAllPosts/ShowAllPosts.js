@@ -49,11 +49,16 @@ export default function PostList() {
     if (response.status === 200) {
       // Save data to local storage to ensure data persistence
       localStorage.removeItem("postItem"); // removes previously stored items
+      localStorage.removeItem("postPhoto");
       localStorage.setItem("postItem", JSON.stringify(data));
-      setLoading(false);
-      history.push("/posts/open");
+
+      setTimeout(() => {
+        history.push("/posts/open"); // Gives some time to fetch post photo from local storage
+      }, 2000);
+
       // call function to fetch photo
       getPhoto(postId);
+      setLoading(false);
     }
   };
 
