@@ -66,30 +66,38 @@ export default function PostList() {
   }, []);
 
   const showPosts = () => {
-    return posts.map((post) => {
-      return (
-        <div className="show__allposts" data-aos="fade-up">
-          <div className="container" key={post._id}>
-            {/* <img
-                src="https://res.cloudinary.com/ds57wvvno/image/upload/v1584789093/phonelady_lrttvw.jpg"
-                alt="post photo"
-              /> */}
-            <div className="content-container">
-              <div className="content">
-                <h3>{post.title}</h3>
-                <p>{`${post.body.substring(0, 150)}...`}</p>
-                <p>{`By ${post.postedBy.firstName} ${post.postedBy.lastName}`}</p>
-                {/* At the click of the button, fetch that particular post */}
-              </div>
+    return (
+      <div>
+        {posts.length > 0 ? (
+          posts.map((post) => {
+            return (
+              <div className="show__allposts" data-aos="fade-up">
+                <div className="container" key={post._id}>
+                  {/* <img
+                    src="https://res.cloudinary.com/ds57wvvno/image/upload/v1584789093/phonelady_lrttvw.jpg"
+                    alt="post photo"
+                  /> */}
+                  <div className="content-container">
+                    <div className="content">
+                      <h3>{post.title}</h3>
+                      <p>{`${post.body.substring(0, 150)}...`}</p>
+                      <p>{`By ${post.postedBy.firstName} ${post.postedBy.lastName}`}</p>
+                      {/* At the click of the button, fetch that particular post */}
+                    </div>
 
-              <a href="#" onClick={() => getOnePost(post._id)}>
-                Read more
-              </a>
-            </div>
-          </div>
-        </div>
-      );
-    });
+                    <a href="#" onClick={() => getOnePost(post._id)}>
+                      Read more
+                    </a>
+                  </div>
+                </div>
+              </div>
+            );
+          })
+        ) : (
+          <p>Zilch! Be The First to Write a Post</p>
+        )}
+      </div>
+    );
   };
   return (
     <React.Fragment>

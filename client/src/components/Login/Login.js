@@ -44,7 +44,7 @@ export default function Login() {
       localStorage.setItem("auth-token", JSON.stringify(responseData));
 
       // setTimeout(() => {
-      history.push("/");
+      history.push("/posts");
       // }, 2000);
     }
   };
