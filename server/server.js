@@ -19,14 +19,14 @@ app.use("/user", userRouter);
 app.use("/comment", commentRouter);
 
 // Heroku config. Serve static assets in production
-if (process.env.NODE_ENV === "production") {
-  // set static folder
-  app.use(express.static(path.join(__dirname, "..", "client", "build")));
+// if (process.env.NODE_ENV === "production") {
+// set static folder
+app.use(express.static(path.join(__dirname, "..", "client", "build")));
 
-  app.get("*", (req, res) => {
-    res.sendFile(path.join(__dirname, "..", "client", "build", "index.html"));
-  });
-}
+app.get("*", (req, res) => {
+  res.sendFile(path.join(__dirname, "..", "client", "build", "index.html"));
+});
+// }
 
 // set up server
 const PORT = process.env.PORT || 5000;
