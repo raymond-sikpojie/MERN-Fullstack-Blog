@@ -89,7 +89,7 @@ router.get("/", async (req, res) => {
 
 // Fine one user
 router.get("/:userId", async (req, res) => {
-  const userId = req.params.id;
+  const userId = req.params.userId;
   try {
     const user = await User.findById(userId)
       .select("-password")
