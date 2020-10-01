@@ -88,10 +88,12 @@ router.get("/", async (req, res) => {
 });
 
 // Fine one user
-router.get("/:id", async (req, res) => {
-  const id = req.params.id;
+router.get("/:userId", async (req, res) => {
+  const userId = req.params.id;
   try {
-    const user = await User.findById(id).select("-password").populate("posts");
+    const user = await User.findById(userId)
+      .select("-password")
+      .populate("posts");
     if (!user) return res.status(401).send({ msg: "No user found" });
 
     // test
