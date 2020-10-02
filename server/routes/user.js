@@ -87,7 +87,7 @@ router.get("/", async (req, res) => {
   }
 });
 
-// Fine one user
+// Fine one user ** this endpoint should be authenticated **
 router.get("/:userId", async (req, res) => {
   const userId = req.params.userId;
   try {
@@ -96,9 +96,6 @@ router.get("/:userId", async (req, res) => {
       .populate("posts");
     if (!user) return res.status(401).send({ msg: "No user found" });
 
-    // test
-    // user.posts = [];
-    // await user.save();
     res.status(200).send(user);
   } catch (error) {
     res.status(500).send(error.message);
