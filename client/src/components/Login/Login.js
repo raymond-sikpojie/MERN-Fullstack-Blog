@@ -46,6 +46,8 @@ export default function Login() {
       // setTimeout(() => {
       history.push("/posts");
       // }, 2000);
+    } else if (response.status === 400) {
+      alert(responseData.msg);
     }
   };
 
