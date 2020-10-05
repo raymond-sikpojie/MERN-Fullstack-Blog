@@ -92,3 +92,9 @@
 :-ms-input-placeholder {
   color: #888;
 }
+
+@media (max-width: 600px) {
+  .form-container {
+    width: 90vw;
+  }
+}
