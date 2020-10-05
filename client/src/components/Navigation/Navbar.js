@@ -82,47 +82,5 @@ export default function Navbar() {
         </ul>
       </nav>
     </React.Fragment>
-
-    // <div className="nav-main">
-    //   <div className="menu-wrap">
-    //     <input type="checkbox" class="toggler" />
-    //     <div className="hamburger">
-    //       <div></div>
-    //     </div>
-    //     <div className="menu">
-    //       <div>
-    //         {loggedIn === true || token ? (
-    //           <div>
-    //             <ul>
-    //               <li>
-    //                 <Link to="/">Home</Link>
-    //               </li>
-    //               <li>
-    //                 <Link to="/posts/new">New Post</Link>
-    //               </li>
-    //               <li>
-    //                 <Link to="/user/post">Manage My Posts</Link>
-    //               </li>
-    //               <li>
-    //                 <Link to="/" onClick={handleLogout}>
-    //                   Sign Out
-    //                 </Link>
-    //               </li>
-    //             </ul>
-    //           </div>
-    //         ) : (
-    //           <div className="menu-noToken">
-    //             <li>
-    //               <Link to="/">Home</Link>
-    //             </li>
-    //             <li>
-    //               <Link to="/login">Login</Link>
-    //             </li>
-    //           </div>
-    //         )}
-    //       </div>
-    //     </div>
-    //   </div>
-    // </div>
   );
 }
