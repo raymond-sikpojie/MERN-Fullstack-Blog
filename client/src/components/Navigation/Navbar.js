@@ -1,8 +1,11 @@
 import React, { useContext } from "react";
+import { Link, useHistory } from "react-router-dom";
 import UserContext from "../../context/Context";
 import "./navbar.css";
 
 export default function Navbar() {
+  const history = useHistory();
+
   let { loggedIn, setLoggedIn } = useContext(UserContext);
 
   // get token from local storage
@@ -16,12 +19,31 @@ export default function Navbar() {
 
   //   const token = userData.token;
 
+  // Navigate to home page
+  const navigateToHomePage = () => {
+    history.push("/");
+    window.location.reload(false);
+  };
+
+  // Navigate to new post
+  const navigateToNewPost = () => {
+    window.location.reload(false);
+    history.push("/posts/new");
+  };
+
+  // Navigate to user post
+  const navigateToUserPost = () => {
+    window.location.reload(false);
+    history.push("/user/post");
+  };
+
   // Logout function
   const handleLogout = () => {
     localStorage.clear();
     setLoggedIn(false);
     // userData = {};
-    // history.push("/");
+    window.location.reload(false);
+    history.push("/");
   };
 
   return (
@@ -37,18 +59,24 @@ export default function Navbar() {
               <div>
                 <ul>
                   <li>
-                    <a href="/">Home</a>
+                    <Link to="#" onClick={navigateToHomePage}>
+                      Home
+                    </Link>
                   </li>
                   <li>
-                    <a href="/posts/new">New Post</a>
+                    <Link to="#" onClick={navigateToNewPost}>
+                      New Post
+                    </Link>
                   </li>
                   <li>
-                    <a href="/user/post">Manage My Posts</a>
+                    <Link to="#" onClick={navigateToUserPost}>
+                      Manage My Posts
+                    </Link>
                   </li>
                   <li>
-                    <a href="/" onClick={handleLogout}>
+                    <Link to="#" onClick={handleLogout}>
                       Sign Out
-                    </a>
+                    </Link>
                   </li>
                 </ul>
               </div>
