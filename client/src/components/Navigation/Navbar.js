@@ -22,18 +22,16 @@ export default function Navbar() {
   // Navigate to home page
   const navigateToHomePage = () => {
     history.push("/");
-    window.location.reload(false);
+    // window.location.reload(false);
   };
 
   // Navigate to new post
   const navigateToNewPost = () => {
-    window.location.reload(false);
     history.push("/posts/new");
   };
 
   // Navigate to user post
   const navigateToUserPost = () => {
-    window.location.reload(false);
     history.push("/user/post");
   };
 
@@ -42,7 +40,6 @@ export default function Navbar() {
     localStorage.clear();
     setLoggedIn(false);
     // userData = {};
-    window.location.reload(false);
     history.push("/");
   };
 
@@ -59,19 +56,13 @@ export default function Navbar() {
               <div>
                 <ul>
                   <li>
-                    <Link to="#" onClick={navigateToHomePage}>
-                      Home
-                    </Link>
+                    <Link to="/">Home</Link>
                   </li>
                   <li>
-                    <Link to="#" onClick={navigateToNewPost}>
-                      New Post
-                    </Link>
+                    <Link to="/posts/new">New Post</Link>
                   </li>
                   <li>
-                    <Link to="#" onClick={navigateToUserPost}>
-                      Manage My Posts
-                    </Link>
+                    <Link to="/user/post">Manage My Posts</Link>
                   </li>
                   <li>
                     <Link to="#" onClick={handleLogout}>
